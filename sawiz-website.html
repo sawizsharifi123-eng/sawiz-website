@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ahmad Sawiz Sharifi — Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --accent:#38e6c9; }
+  html { scroll-behavior:smooth; }
+  body { background:#050505; color:#f5f5f5; font-family:'Vazirmatn',sans-serif; margin:0; overflow-x:hidden; }
+  .font-display { font-family:'Space Grotesk','Vazirmatn',sans-serif; }
+  .text-accent { color:var(--accent); }
+  .bg-accent { background-color:var(--accent); }
+  ::selection { background:var(--accent); color:#050505; }
+  ::-webkit-scrollbar { width:8px; }
+  ::-webkit-scrollbar-track { background:#0a0a0a; }
+  ::-webkit-scrollbar-thumb { background:#2a2a2a; border-radius:4px; }
+  ::-webkit-scrollbar-thumb:hover { background:var(--accent); }
+  .reveal { opacity:0; transform:translateY(40px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+  .reveal.show { opacity:1; transform:translateY(0); }
+  .marquee { display:flex; white-space:nowrap; animation:scroll 22s linear infinite; }
+  @keyframes scroll { from{transform:translateX(0);} to{transform:translateX(50%);} }
+  .stroke-text { color:transparent; -webkit-text-stroke:1.5px var(--accent); text-shadow:0 0 24px rgba(214,255,63,.25); }
+  .marquee .stroke-text:nth-child(even) { -webkit-text-stroke:1.5px rgba(255, 255, 255, 0.895); text-shadow:none; }
+  [dir="ltr"] .flip { transform:scaleX(-1); }
+  .lang-en { display:none; }
+  html[data-lang="en"] .lang-fa { display:none; }
+  html[data-lang="en"] .lang-en { display:inline; }
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="hdr" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+    <a href="#hero" class="font-display text-lg font-bold tracking-tight hover:text-accent transition-colors">AHMAD SAWIZ SHARIFI<span class="text-accent">.</span></a>
+    <nav class="hidden md:flex items-center gap-10">
+      <a href="#about" class="text-sm text-zinc-400 hover:text-white transition-colors"><span class="lang-fa">درباره</span><span class="lang-en">About</span></a>
+      <a href="#skills" class="text-sm text-zinc-400 hover:text-white transition-colors"><span class="lang-fa">مهارت‌ها</span><span class="lang-en">Skills</span></a>
+      <a href="#projects" class="text-sm text-zinc-400 hover:text-white transition-colors"><span class="lang-fa">کارها</span><span class="lang-en">Work</span></a>
+      <a href="#contact" class="text-sm text-zinc-400 hover:text-white transition-colors"><span class="lang-fa">تماس</span><span class="lang-en">Contact</span></a>
+    </nav>
+    <div class="flex items-center gap-3">
+      
+      <button onclick="toggleLang()" class="flex items-center gap-2 text-sm font-medium border border-white/20 px-4 py-2 rounded-full hover:border-accent hover:text-accent transition-colors duration-300">
+        <span class="lang-fa">EN | English</span><span class="lang-en">FA | دری</span>
+      </button>
+      <a href="#contact" class="btn-invert hidden md:inline-flex items-center gap-2 text-sm font-medium bg-white text-black px-5 py-2.5 rounded-full hover:bg-accent transition-colors duration-300"><span class="lang-fa">بیایید گپ بزنیم</span><span class="lang-en">Let's Talk</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="hero" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+  <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[140px] pointer-events-none"></div>
+  <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
+    <p class="uppercase text-xs tracking-[0.3em] text-accent mb-6 font-display"><span class="lang-fa">نمونه‌کار شخصی — ۲۰۲۶</span><span class="lang-en">Personal Portfolio — 2026</span></p>
+    <h1 class="text-5xl sm:text-6xl lg:text-8xl font-black tracking-tight leading-[1.05] max-w-4xl">
+      <span class="lang-fa">احمد ساویز شریفی</span><span class="lang-en">Ahmad Sawiz Sharifi</span>
+      <span class="block text-zinc-500 font-light mt-3 text-2xl sm:text-3xl lg:text-4xl leading-snug"><span class="lang-fa">دیزاینر گرافیک و دیویلپر فرانت‌اند</span><span class="lang-en">Graphic Designer & Front-End Developer</span></span>
+    </h1>
+    <p class="mt-8 text-lg text-zinc-400 max-w-xl leading-relaxed"><span class="lang-fa">خلاقیت بصری را با کود به تجربه‌های دیجیتلی زیبا و کارآمد تبدیل می‌کنم.</span><span class="lang-en">I turn visual creativity into beautiful, functional digital experiences with code.</span></p>
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <a href="#projects" class="inline-flex items-center gap-2 bg-accent text-black font-medium px-7 py-3.5 rounded-full hover:-translate-y-1 transition-transform duration-300"><span class="lang-fa">دیدن کارها</span><span class="lang-en">View Work</span></a>
+      <a href="#contact" class="inline-flex items-center gap-2 border border-white/20 px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-colors duration-300"><span class="lang-fa">تماس با من</span><span class="lang-en">Contact Me</span></a>
+      <span class="text-sm text-zinc-500 mr-2"><span class="lang-fa">کابل، افغانستان</span><span class="lang-en">Kabul, Afghanistan</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="border-y border-white/10 py-6 bg-black overflow-hidden">
+  <div class="marquee">
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">دیزاین</span><span class="lang-en">Design</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">دیویلپمنت</span><span class="lang-en">Development</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">خلاقیت</span><span class="lang-en">Creativity</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">ستراتیژی</span><span class="lang-en">Strategy</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">نوآوری</span><span class="lang-en">Innovation</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">کیفیت</span><span class="lang-en">Quality</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">دیزاین</span><span class="lang-en">Design</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">دیویلپمنت</span><span class="lang-en">Development</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">خلاقیت</span><span class="lang-en">Creativity</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">ستراتیژی</span><span class="lang-en">Strategy</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">نوآوری</span><span class="lang-en">Innovation</span> <span class="text-accent">*</span></span>
+    <span class="font-display text-4xl sm:text-6xl font-black stroke-text mx-8"><span class="lang-fa">کیفیت</span><span class="lang-en">Quality</span> <span class="text-accent">*</span></span>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about" class="max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-40">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+    <div class="md:col-span-4 reveal">
+      <p class="uppercase text-xs tracking-[0.3em] text-accent mb-4 font-display"><span class="lang-fa">درباره من</span><span class="lang-en">About Me</span></p>
+      <h2 class="text-4xl lg:text-5xl font-black tracking-tight leading-tight"><span class="lang-fa">چه کسی <br/> هستم؟</span><span class="lang-en">Who <br/> am I?</span></h2>
+    </div>
+    <div class="md:col-span-8 space-y-6 reveal">
+      <p class="text-xl lg:text-2xl text-zinc-200 leading-relaxed font-light"><span class="lang-fa">من احمد ساویز شریفی هستم؛ متخصص آی‌تی، دیزاینر گرافیک و دیویلپر فرانت‌اند از کابل، افغانستان. با یکجا کردن خلاقیت بصری و مهارت‌های تخنیکی، دیزاین‌ها و ویب‌سایت‌هایی می‌سازم که هم چشم‌گیر باشند و هم پیام برند را درست انتقال بدهند.</span><span class="lang-en">I'm Ahmad Sawiz Sharifi, an IT specialist, graphic designer, and front-end developer from Kabul, Afghanistan. By combining visual creativity with technical skills, I build designs and websites that are both eye-catching and communicate the brand message clearly.</span></p>
+      <p class="text-base text-zinc-500 leading-relaxed max-w-2xl"><span class="lang-fa">علاقه‌مندی من ساختن تجربه‌هایی است که ساده، مدرن و آسان برای کاربر باشند. همیشه در حال یاد گرفتن ابزارها و تکنالوژی‌های نو هستم تا کیفیت کارم را بلندتر ببرم.</span><span class="lang-en">My passion is crafting experiences that are simple, modern, and user-friendly. I'm always learning new tools and technologies to raise the quality of my work.</span></p>
+      <div class="grid grid-cols-3 gap-4 pt-8">
+        <div class="border border-white/10 rounded-2xl p-5 hover:border-accent/50 hover:-translate-y-1 transition-all duration-300"><div class="font-display text-3xl lg:text-4xl font-bold text-accent">50+</div><div class="text-xs text-zinc-500 mt-2"><span class="lang-fa">پروژه انجام‌شده</span><span class="lang-en">Projects Done</span></div></div>
+        <div class="border border-white/10 rounded-2xl p-5 hover:border-accent/50 hover:-translate-y-1 transition-all duration-300"><div class="font-display text-3xl lg:text-4xl font-bold text-accent">2</div><div class="text-xs text-zinc-500 mt-2"><span class="lang-fa">سال تجربه</span><span class="lang-en">Years Experience</span></div></div>
+        <div class="border border-white/10 rounded-2xl p-5 hover:border-accent/50 hover:-translate-y-1 transition-all duration-300"><div class="font-display text-3xl lg:text-4xl font-bold text-accent">25+</div><div class="text-xs text-zinc-500 mt-2"><span class="lang-fa">مشتری راضی</span><span class="lang-en">Happy Clients</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-40">
+    <div class="mb-16 reveal">
+      <p class="uppercase text-xs tracking-[0.3em] text-accent mb-4 font-display"><span class="lang-fa">تخصص‌ها</span><span class="lang-en">Expertise</span></p>
+      <h2 class="text-4xl lg:text-5xl font-black tracking-tight max-w-2xl"><span class="lang-fa">کاری که <span class="text-zinc-500">انجام می‌دهم</span></span><span class="lang-en">What I <span class="text-zinc-500">Do</span></span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 border-t border-r border-white/10">
+      <div class="group border-b border-l border-white/10 p-8 lg:p-10 hover:bg-white/[0.03] transition-colors duration-300 reveal"><div class="font-display text-sm text-zinc-600 mb-4">01</div><h3 class="text-2xl font-bold mb-3 group-hover:text-accent transition-colors duration-300"><span class="lang-fa">دیزاین گرافیک</span><span class="lang-en">Graphic Design</span></h3><p class="text-zinc-500 leading-relaxed"><span class="lang-fa">دیزاین لوگو، هویت بصری برند، پوستر، بروشور و محتوای بصری مسلکی.</span><span class="lang-en">Logo design, brand identity, posters, brochures, and professional visual content.</span></p></div>
+      <div class="group border-b border-l border-white/10 p-8 lg:p-10 hover:bg-white/[0.03] transition-colors duration-300 reveal"><div class="font-display text-sm text-zinc-600 mb-4">02</div><h3 class="text-2xl font-bold mb-3 group-hover:text-accent transition-colors duration-300"><span class="lang-fa">دیزاین UI/UX</span><span class="lang-en">UI/UX Design</span></h3><p class="text-zinc-500 leading-relaxed"><span class="lang-fa">دیزاین انترفیس کاربری مدرن و جذاب با تمرکز بالای تجربه کاربر.</span><span class="lang-en">Modern, attractive user interface design with a focus on user experience.</span></p></div>
+      <div class="group border-b border-l border-white/10 p-8 lg:p-10 hover:bg-white/[0.03] transition-colors duration-300 reveal"><div class="font-display text-sm text-zinc-600 mb-4">03</div><h3 class="text-2xl font-bold mb-3 group-hover:text-accent transition-colors duration-300"><span class="lang-fa">دیویلپمنت فرانت‌اند</span><span class="lang-en">Front-End Development</span></h3><p class="text-zinc-500 leading-relaxed"><span class="lang-fa">ساختن ویب‌سایت‌های ریسپانسیو با HTML، CSS، JavaScript و React.</span><span class="lang-en">Building responsive websites with HTML, CSS, JavaScript, and React.</span></p></div>
+      <div class="group border-b border-l border-white/10 p-8 lg:p-10 hover:bg-white/[0.03] transition-colors duration-300 reveal"><div class="font-display text-sm text-zinc-600 mb-4">04</div><h3 class="text-2xl font-bold mb-3 group-hover:text-accent transition-colors duration-300"><span class="lang-fa">ابزارهای دیزاین</span><span class="lang-en">Design Tools</span></h3><p class="text-zinc-500 leading-relaxed"><span class="lang-fa">تسلط بالای Adobe Photoshop، Illustrator و Figma برای خروجی باکیفیت.</span><span class="lang-en">Proficiency in Adobe Photoshop, Illustrator, and Figma for high-quality output.</span></p></div>
+    </div>
+    <div class="mt-20">
+      <h3 class="text-2xl font-bold mb-8"><span class="lang-fa">تجربه کاری</span><span class="lang-en">Work Experience</span></h3>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-6 border-b border-white/10 group hover:px-2 transition-all duration-300 reveal"><div><span class="text-xl font-medium group-hover:text-accent transition-colors duration-300"><span class="lang-fa">دیزاینر و دیویلپر فرانت‌اند</span><span class="lang-en">Designer & Front-End Developer</span></span><span class="text-zinc-500 mx-3">— <span class="lang-fa">شرکت تکنالوژی سپارک ترست</span><span class="lang-en">Spark Trust Technology Company</span></span></div><span class="font-display text-sm text-zinc-600"><span class="lang-fa">۱ سال</span><span class="lang-en">1 Year</span></span></div>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-6 border-b border-white/10 group hover:px-2 transition-all duration-300 reveal"><div><span class="text-xl font-medium group-hover:text-accent transition-colors duration-300"><span class="lang-fa">دیزاینر گرافیک</span><span class="lang-en">Graphic Designer</span></span><span class="text-zinc-500 mx-3">— <span class="lang-fa">شرکت ادویه بایو مورفکس فارما</span><span class="lang-en">BioMorphex Pharmaceuticals Company</span></span></div><span class="font-display text-sm text-zinc-600"><span class="lang-fa">۱ سال</span><span class="lang-en">1 Year</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-40">
+    <div class="mb-16 reveal">
+      <p class="uppercase text-xs tracking-[0.3em] text-accent mb-4 font-display"><span class="lang-fa">نمونه‌کارها</span><span class="lang-en">Portfolio</span></p>
+      <h2 class="text-4xl lg:text-5xl font-black tracking-tight"><span class="lang-fa">پروژه‌های <span class="text-zinc-500">منتخب</span></span><span class="lang-en">Selected <span class="text-zinc-500">Projects</span></span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <a href="#" class="group relative overflow-hidden rounded-3xl border border-white/10 md:col-span-7 md:row-span-2 reveal">
+        <div class="overflow-hidden h-80 md:h-[520px]"><img src="https://images.unsplash.com/photo-1738844153732-a485f0e78382?crop=entropy&cs=srgb&fm=jpg&q=85" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" /></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-8"><span class="uppercase text-xs tracking-[0.2em] text-accent font-display"><span class="lang-fa">دیزاین گرافیک</span><span class="lang-en">Graphic Design</span></span><h3 class="text-2xl lg:text-3xl font-bold mt-2"><span class="lang-fa">هویت بصری برند</span><span class="lang-en">Brand Identity</span></h3><p class="text-zinc-400 mt-2 max-w-md"><span class="lang-fa">دیزاین لوگو و هویت بصری مکمل برای برندهای مختلف با روش مدرن.</span><span class="lang-en">Logo and complete visual identity design for various brands with a modern approach.</span></p></div>
+      </a>
+      <a href="#" class="group relative overflow-hidden rounded-3xl border border-white/10 md:col-span-5 reveal">
+        <div class="overflow-hidden h-64"><img src="https://images.unsplash.com/photo-1517241034903-9a4c3ab12f00?crop=entropy&cs=srgb&fm=jpg&q=85" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" /></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-8"><span class="uppercase text-xs tracking-[0.2em] text-accent font-display"><span class="lang-fa">دیویلپمنت فرانت‌اند</span><span class="lang-en">Front-End</span></span><h3 class="text-2xl lg:text-3xl font-bold mt-2"><span class="lang-fa">دیزاین ویب‌سایت</span><span class="lang-en">Website Design</span></h3><p class="text-zinc-400 mt-2 max-w-md"><span class="lang-fa">دیزاین و ساختن ویب‌سایت‌های ریسپانسیو و مدرن با تجربه کاربری روان.</span><span class="lang-en">Designing and building responsive, modern websites with smooth user experience.</span></p></div>
+      </a>
+      <a href="#" class="group relative overflow-hidden rounded-3xl border border-white/10 md:col-span-5 reveal">
+        <div class="overflow-hidden h-64"><img src="https://images.unsplash.com/photo-1652120268427-9ba66e870467?crop=entropy&cs=srgb&fm=jpg&q=85" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" /></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-8"><span class="uppercase text-xs tracking-[0.2em] text-accent font-display"><span class="lang-fa">دیزاین UI/UX</span><span class="lang-en">UI/UX Design</span></span><h3 class="text-2xl lg:text-3xl font-bold mt-2"><span class="lang-fa">دیزاین انترفیس اپلیکیشن</span><span class="lang-en">App Interface Design</span></h3><p class="text-zinc-400 mt-2 max-w-md"><span class="lang-fa">دیزاین انترفیس کاربری اپلیکیشن موبایل با تمرکز بالای سادگی و زیبایی.</span><span class="lang-en">Mobile app UI design focused on simplicity and beauty.</span></p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-40">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div class="reveal">
+        <p class="uppercase text-xs tracking-[0.3em] text-accent mb-4 font-display"><span class="lang-fa">تماس</span><span class="lang-en">Contact</span></p>
+        <h2 class="text-4xl lg:text-6xl font-black tracking-tight leading-tight"><span class="lang-fa">بیایید چیزی <br/> <span class="text-accent">فوق‌العاده</span> بسازیم</span><span class="lang-en">Let's build <br/> something <span class="text-accent">amazing</span></span></h2>
+        <p class="text-zinc-500 mt-6 max-w-md leading-relaxed"><span class="lang-fa">برای همکاری، پروژه یا حتی یک سلام دوستانه، از راه‌های زیر با من در تماس شوید.</span><span class="lang-en">For collaboration, a project, or even a friendly hello, reach me through the links below.</span></p>
+        <div class="mt-10 space-y-3">
+          <a href="mailto:sawizsharifi123@gmail.com" class="flex items-center justify-between border-b border-white/10 py-4 group hover:px-2 transition-all duration-300"><span class="text-zinc-400 group-hover:text-accent transition-colors duration-300"><span class="lang-fa">ایمیل</span><span class="lang-en">Email</span></span><span class="font-display text-sm text-zinc-500 group-hover:text-white transition-colors duration-300">sawizsharifi123@gmail.com</span></a>
+          <a href="https://instagram.com/sawizsharifi" target="_blank" rel="noreferrer" class="flex items-center justify-between border-b border-white/10 py-4 group hover:px-2 transition-all duration-300"><span class="text-zinc-400 group-hover:text-accent transition-colors duration-300"><span class="lang-fa">اینستاگرام</span><span class="lang-en">Instagram</span></span><span class="font-display text-sm text-zinc-500 group-hover:text-white transition-colors duration-300" dir="ltr">@sawizsharifi</span></a>
+        </div>
+      </div>
+      <form onsubmit="event.preventDefault(); alert(document.documentElement.getAttribute('data-lang')==='en' ? 'Your message has been recorded! I will reply soon.' : 'پیام تان ثبت شد! به‌زودی جواب می‌دهم.'); this.reset();" class="space-y-5 reveal">
+        <div><label class="text-sm text-zinc-500 mb-2 block"><span class="lang-fa">نام شما</span><span class="lang-en">Your Name</span></label><input required class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 focus:border-accent focus:outline-none transition-colors duration-300" /></div>
+        <div><label class="text-sm text-zinc-500 mb-2 block"><span class="lang-fa">ایمیل</span><span class="lang-en">Email</span></label><input type="email" required dir="ltr" class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 focus:border-accent focus:outline-none transition-colors duration-300" placeholder="you@example.com" /></div>
+        <div><label class="text-sm text-zinc-500 mb-2 block"><span class="lang-fa">پیام</span><span class="lang-en">Message</span></label><textarea required rows="5" class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 focus:border-accent focus:outline-none transition-colors duration-300 resize-none"></textarea></div>
+        <button type="submit" class="w-full bg-accent text-black font-medium py-4 rounded-full hover:-translate-y-1 transition-transform duration-300"><span class="lang-fa">فرستادن پیام</span><span class="lang-en">Send Message</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span class="font-display font-bold">AHMAD SAWIZ SHARIFI<span class="text-accent">.</span></span>
+    <span class="text-sm text-zinc-600"><span class="lang-fa">© ۲۰۲۶ — ساخته شده با علاقه</span><span class="lang-en">© 2026 — Made with passion</span></span>
+    <a href="#hero" class="text-sm text-zinc-500 hover:text-accent transition-colors duration-300"><span class="lang-fa">بازگشت به بالا</span><span class="lang-en">Back to top</span></a>
+  </div>
+</footer>
+
+<script>
+  function toggleLang() {
+    const html = document.documentElement;
+    const en = html.getAttribute('data-lang') === 'en';
+    if (en) { html.setAttribute('data-lang','fa'); html.setAttribute('dir','rtl'); html.setAttribute('lang','fa'); }
+    else { html.setAttribute('data-lang','en'); html.setAttribute('dir','ltr'); html.setAttribute('lang','en'); }
+  }
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.getAttribute('data-theme') === 'light') html.removeAttribute('data-theme');
+    else html.setAttribute('data-theme','light');
+  }
+  const hdr = document.getElementById('hdr');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) hdr.className = 'fixed top-0 inset-x-0 z-50 transition-colors duration-300 bg-black/60 backdrop-blur-xl border-b border-white/10';
+    else hdr.className = 'fixed top-0 inset-x-0 z-50 transition-colors duration-300';
+  });
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a"}' crossorigin="anonymous"></script>
+</body>
+</html>
